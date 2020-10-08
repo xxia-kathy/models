@@ -27,7 +27,7 @@ from tensorflow.python.keras.benchmarks import benchmark_util
 class ConvMnistBenchmark(tf.test.Benchmark):
   """Benchmarks for Convnet using `tf.test.Benchmark`."""
 
-  def __init__(self, output_dir=None, root_data_dir=None, tpu=None):
+  def __init__(self):
     super(ConvMnistBenchmark, self).__init__()
     self.num_classes = 10
     self.input_shape = (28, 28, 1)

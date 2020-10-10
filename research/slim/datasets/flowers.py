@@ -28,7 +28,7 @@ import tf_slim as slim
 
 from datasets import dataset_utils
 
-_FILE_PATTERN = '*.tfrecord'
+_FILE_PATTERN = '%s-00000-of-00001.tfrecord'
 
 SPLITS_TO_SIZES = {'train': 112, 'validation': 14}
 

@@ -506,7 +506,8 @@ class DeployTest(tf.test.TestCase):
       self.assertEqual(model.summary_op.op.name, 'summary_op/summary_op')
       self.assertEqual(model.train_op.op.name, 'train_op')
 
-      with tf.Session() as sess:
+      with tf.Session(config=tf.ConfigProto(
+      allow_soft_placement=True, log_device_placement=True)) as sess:
         sess.run(tf.global_variables_initializer())
         moving_mean = slim.get_variables_by_name('moving_mean')[0]
         moving_variance = slim.get_variables_by_name('moving_variance')[0]

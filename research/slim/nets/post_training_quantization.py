@@ -145,7 +145,8 @@ def _representative_dataset_gen():
 
 
 def main(_):
-  with tf.Graph().as_default(), tf.Session() as sess:
+  with tf.Graph().as_default(), tf.Session(config=tf.ConfigProto(
+      allow_soft_placement=True, log_device_placement=True)) as sess:
     network_fn = nets_factory.get_network_fn(
         FLAGS.model_name, num_classes=FLAGS.num_classes, is_training=False)
     image_size = FLAGS.image_size

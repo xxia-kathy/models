@@ -30,7 +30,7 @@ from datasets import dataset_utils
 
 _FILE_PATTERN = '%s-00000-of-00001'
 
-SPLITS_TO_SIZES = {'train': 112, 'validation': 14}
+SPLITS_TO_SIZES = {'train': 11131, 'validation': 1391}
 
 _NUM_CLASSES = 2
 
